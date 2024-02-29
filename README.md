@@ -1,7 +1,7 @@
 # Frontend Mentor - REST Countries API with color theme switcher
 
-![Design preview for the REST Countries API with color theme switcher coding challenge](./design/desktop-preview.jpg)
-https://zaleskiy88.github.io/
+
+[https://zaleskiy88.github.io/](https://zaleskiy88.github.io/flags-finder/)
 ## Welcome! 👋
 
 Thanks for checking out this front-end coding challenge.
