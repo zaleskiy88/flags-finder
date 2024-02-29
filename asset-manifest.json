@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/zaleskiy88/flags-finder/static/css/main.f6dd59b0.css",
+    "main.js": "/zaleskiy88/flags-finder/static/js/main.d2f42268.js",
+    "index.html": "/zaleskiy88/flags-finder/index.html",
+    "main.f6dd59b0.css.map": "/zaleskiy88/flags-finder/static/css/main.f6dd59b0.css.map",
+    "main.d2f42268.js.map": "/zaleskiy88/flags-finder/static/js/main.d2f42268.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f6dd59b0.css",
+    "static/js/main.d2f42268.js"
+  ]
+}
