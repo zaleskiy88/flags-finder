@@ -9,3 +9,8 @@ export * from "components/search/Search";
 export * from "components/search/Search.styled";
 export * from "components/search/SearchBar";
 export * from "components/search/SearchBar.styled";
+export * from "components/countriesList/CountriesList";
+export * from "components/countriesList/CountriesList.styled";
+export * from "components/countryCard/CountryCard";
+export * from "components/countryCard/CountryCard.styled";
+export * from "components/BackBtn/BackBtn.styled";

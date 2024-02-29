@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 export const PageHeader = styled.header`
   box-shadow: var(--shadow);
@@ -12,7 +13,7 @@ export const Wrapper = styled.div`
   padding-bottom: 30px;
 `;
 
-export const PageTitle = styled.a.attrs({ href: "/" })`
+export const PageTitle = styled(Link).attrs({ to: "/" })`
   color: var(--colors-text);
   font-size: var(--fs-xm);
   font-weight: var(--fw-bold);

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { SearchBar, ContinentSelector, SearchWrapper } from "components/index";
 
 const continetsOptions = [
@@ -9,17 +9,20 @@ const continetsOptions = [
   { value: "oceania", label: "Oceania" },
 ];
 
-export const Search = () => {
+export const Search = ({ onSearch }) => {
   const [searchInput, setSearchInput] = useState("");
   const [region, setRegion] = useState("");
 
-  const inputHandler = (e) => {
-    setSearchInput(e.target.value);
-  };
+  useEffect(() => {
+    const regionValue = region?.value || "";
+    onSearch(searchInput, regionValue);
+
+    // eslint-disable-next-line
+  }, [searchInput, region]);
 
   return (
     <SearchWrapper>
-      <SearchBar searchInput={searchInput} inputHandler={inputHandler} />
+      <SearchBar searchInput={searchInput} setSearchInput={setSearchInput} />
       <ContinentSelector
         options={continetsOptions}
         placeholder="Filter by region"
