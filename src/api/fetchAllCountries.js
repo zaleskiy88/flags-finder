@@ -1,5 +1,6 @@
 import axios from "axios";
 import { ALL_COUNTRIES } from "api/index";
+
 export const fetchAllCountries = async () => {
   try {
     const response = await axios.get(ALL_COUNTRIES);

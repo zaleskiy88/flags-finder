@@ -14,3 +14,5 @@ export * from "components/countriesList/CountriesList.styled";
 export * from "components/countryCard/CountryCard";
 export * from "components/countryCard/CountryCard.styled";
 export * from "components/BackBtn/BackBtn.styled";
+export * from "components/detailsCard/DetailsCard";
+export * from "components/detailsCard/DetailsCard.styled";

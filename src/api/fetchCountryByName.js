@@ -4,6 +4,7 @@ import { searchByCountry } from "api/index";
 export const fetchCountryByName = async (name) => {
   try {
     const response = await axios.get(searchByCountry(name));
+
     return response.data[0];
   } catch (error) {
     console.error("Error fetching countries:", error);
