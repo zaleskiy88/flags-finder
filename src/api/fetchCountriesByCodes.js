@@ -1,6 +1,12 @@
 import axios from "axios";
 import { BASE_URL } from "api/index";
 
+/**
+ * Asynchronously fetches country data by their codes.
+ *
+ * @param {array} codes - The array of country codes to fetch data for.
+ * @return {object} The data representing the fetched countries.
+ */
 export const fetchCountryByCodes = async (codes) => {
   try {
     if (codes.length > 0) {

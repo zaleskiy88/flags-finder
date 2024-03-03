@@ -31,8 +31,12 @@ export const DetailsCard = ({ countryData }) => {
 
   useEffect(() => {
     const getBorders = async () => {
-      const res = await fetchCountryByCodes(borders.join(","));
-      setBorderCountries(res);
+      try {
+        const res = await fetchCountryByCodes(borders.join(","));
+        setBorderCountries(res);
+      } catch (error) {
+        console.error("Error fetching border countries:", error);
+      }
     };
     getBorders();
   }, [borders]);
@@ -85,7 +89,6 @@ export const DetailsCard = ({ countryData }) => {
         </ul>
 
         <BordersTitle>Border Countries: </BordersTitle>
-
         {borders.length > 0 ? (
           <ul>
             {borderCountries.map((country) => (

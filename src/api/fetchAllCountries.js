@@ -1,6 +1,11 @@
 import axios from "axios";
 import { ALL_COUNTRIES } from "api/index";
 
+/**
+ * Fetches all countries from the server, with error handling.
+ *
+ * @return {Array} The first 20 countries from the server, or an empty array in case of an error.
+ */
 export const fetchAllCountries = async () => {
   try {
     const response = await axios.get(ALL_COUNTRIES);
