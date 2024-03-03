@@ -7,6 +7,7 @@ import { BASE_URL } from "api/index";
  * @param {array} codes - The array of country codes to fetch data for.
  * @return {object} The data representing the fetched countries.
  */
+
 export const fetchCountryByCodes = async (codes) => {
   try {
     if (codes.length > 0) {
