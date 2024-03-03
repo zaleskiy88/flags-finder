@@ -1,10 +1,10 @@
 # Frontend Mentor - REST Countries API with color theme switcher
 
-https://zaleskiy88.github.io
 [https://zaleskiy88.github.io/](https://zaleskiy88.github.io/flags-finder/)
+
 ## Welcome! 👋
 
-Thanks for checking out this front-end coding challenge.
+<!-- Thanks for checking out this front-end coding challenge.
 
 [Frontend Mentor](https://www.frontendmentor.io) challenges help you improve your coding skills by building realistic projects.
 
@@ -14,21 +14,28 @@ Thanks for checking out this front-end coding challenge.
 
 Your challenge is to integrate with the [REST Countries API](https://restcountries.com) to pull country data and display it like in the designs.
 
-You can use any JavaScript framework/library on the front-end such as [React](https://reactjs.org) or [Vue](https://vuejs.org). You also have complete control over which packages you use to do things like make HTTP requests or style your project.
+You can use any JavaScript framework/library on the front-end such as [React](https://reactjs.org) or [Vue](https://vuejs.org). You also have complete control over which packages you use to do things like make HTTP requests or style your project. -->
 
-Your users should be able to:
+<!-- Your users should be able to: -->
 
-- See all countries from the API on the homepage
-- Search for a country using an `input` field
-- Filter countries by region
-- Click on a country to see more detailed information on a separate page
-- Click through to the border countries on the detail page
-- Toggle the color scheme between light and dark mode _(optional)_
+Users should be able to:
 
+- Toggle the color scheme between light and dark mode _(optional)_ ✔️
+- See all countries from the API on the homepage ✔️
+- Search for a country using an `input` field ✔️
+- Filter countries by region ✔️
+- Click on a country to see more detailed information on a separate page 🚧
+- Click through to the border countries on the detail page 🚧
+
+<!--
 Want some support on the challenge? [Join our community](https://www.frontendmentor.io/community) and ask questions in the **#help** channel.
+-->
 
+<!--
 **⚠️ NOTE ⚠️: Sometimes the REST Countries API can go down. We've added a `data.json` file with all the country data if you prefer to use that instead. However, please be aware that the data in the JSON file might not be up-to-date.**
+-->
 
+<!--
 ## Where to find everything
 
 Your task is to build out the project to the designs inside the `/design` folder.
@@ -42,7 +49,9 @@ If you would like the design files (we provide Sketch & Figma versions) to inspe
 There are no assets for this challenge, as the country flags will be pulled from the [REST Countries API](https://restcountries.com) and you can use an icon font library for the icons.
 
 There is also a `style-guide.md` file containing the information you'll need, such as color palette and fonts.
+ -->
 
+<!--
 ## Building your project
 
 Feel free to use any workflow that you feel comfortable with. Below is a suggested process, but do not feel like you need to follow these steps:
@@ -53,7 +62,9 @@ Feel free to use any workflow that you feel comfortable with. Below is a suggest
 4. Before adding any styles, structure your content with HTML. Writing your HTML first can help focus your attention on creating well-structured content.
 5. Write out the base styles for your project, including general content styles, such as `font-family` and `font-size`.
 6. Start adding styles to the top of the page and work down. Only move on to the next section once you're happy you've completed the area you're working on.
+-->
 
+<!--
 ## Deploying your project
 
 As mentioned above, there are many ways to host your project for free. Our recommended hosts are:
@@ -63,7 +74,9 @@ As mentioned above, there are many ways to host your project for free. Our recom
 - [Netlify](https://www.netlify.com/)
 
 You can host your site using one of these solutions or any of our other trusted providers. [Read more about our recommended and trusted hosts](https://medium.com/frontend-mentor/frontend-mentor-trusted-hosting-providers-bf000dfebe).
+-->
 
+<!--
 ## Create a custom `README.md`
 
 We strongly recommend overwriting this `README.md` with a custom one. We've provided a template inside the [`README-template.md`](./README-template.md) file in this starter code.
@@ -71,13 +84,17 @@ We strongly recommend overwriting this `README.md` with a custom one. We've prov
 The template provides a guide for what to add. A custom `README` will help you explain your project and reflect on your learnings. Please feel free to edit our template as much as you like.
 
 Once you've added your information to the template, delete this file and rename the `README-template.md` file to `README.md`. That will make it show up as your repository's README file.
+-->
 
+<!--
 ## Submitting your solution
 
 Submit your solution on the platform for the rest of the community to see. Follow our ["Complete guide to submitting solutions"](https://medium.com/frontend-mentor/a-complete-guide-to-submitting-solutions-on-frontend-mentor-ac6384162248) for tips on how to do this.
 
 Remember, if you're looking for feedback on your solution, be sure to ask questions when submitting it. The more specific and detailed you are with your questions, the higher the chance you'll get valuable feedback from the community.
+-->
 
+<!--
 ## Sharing your solution
 
 There are multiple places you can share your solution:
@@ -90,7 +107,9 @@ There are multiple places you can share your solution:
 We provide templates to help you share your solution once you've submitted it on the platform. Please do edit them and include specific questions when you're looking for feedback.
 
 The more specific you are with your questions the more likely it is that another member of the community will give you feedback.
+ -->
 
+<!--
 ## Got feedback for us?
 
 We love receiving feedback! We're always looking to improve our challenges and our platform. So if you have anything you'd like to mention, please email hi[at]frontendmentor[dot]io.
@@ -98,3 +117,4 @@ We love receiving feedback! We're always looking to improve our challenges and o
 This challenge is completely free. Please share it with anyone who will find it useful for practice.
 
 **Have fun building!** 🚀
+-->
