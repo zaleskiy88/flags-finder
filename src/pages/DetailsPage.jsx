@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { IoArrowBack } from "react-icons/io5";
 import { fetchCountryByName } from "api/index";
-import { BackBtn, DetailsCard, DetailsPageWrapper } from "components/index";
+import { BackBtn, DetailsCard, DetailsPageSection } from "components/index";
 
 export const Details = () => {
   const { name } = useParams();
@@ -21,9 +21,8 @@ export const Details = () => {
     }
   }, [name]);
 
-  //console.log(countryData);
   return (
-    <DetailsPageWrapper>
+    <DetailsPageSection>
       <Link to="/">
         <BackBtn>
           <IoArrowBack />
@@ -32,7 +31,7 @@ export const Details = () => {
       </Link>
 
       {countryData && <DetailsCard countryData={countryData} />}
-    </DetailsPageWrapper>
+    </DetailsPageSection>
   );
 };
 
