@@ -21,6 +21,7 @@ export const DetailsArticle = styled.article`
   @media screen and (min-width: 1024px) {
     grid-template-columns: minmax(400px, 560px) 1fr;
     gap: 88px;
+    height: 400px;
   }
 `;
 

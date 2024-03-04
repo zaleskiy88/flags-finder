@@ -1,4 +1,6 @@
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import { getNativeName } from "utils/index";
 import {
   DetailsImg,
   ListGroup,
@@ -10,11 +12,12 @@ import {
   BordersList,
   BordersItem,
 } from "components/index";
-import { getNativeName } from "utils/index";
 
 import { fetchCountryByCodes } from "api/fetchCountriesByCodes";
 
 export const DetailsCard = ({ countryData }) => {
+  const [borderCountries, setBorderCountries] = useState([]);
+  const navigate = useNavigate();
   //destructuring
   const {
     population,
@@ -30,7 +33,9 @@ export const DetailsCard = ({ countryData }) => {
   } = countryData;
   //getting native name
   const nativeName = getNativeName(name);
-  const [borderCountries, setBorderCountries] = useState([]);
+  const navigateTo = (country) => {
+    navigate(`/country/${country.name.common}`);
+  };
 
   useEffect(() => {
     const getBorders = async () => {
@@ -99,7 +104,10 @@ export const DetailsCard = ({ countryData }) => {
           {borders.length > 0 ? (
             <BordersList>
               {borderCountries.map((country) => (
-                <BordersItem key={country.name.official}>
+                <BordersItem
+                  key={country.name.official}
+                  onClick={() => navigateTo(country)}
+                >
                   {country.name.common}
                 </BordersItem>
               ))}

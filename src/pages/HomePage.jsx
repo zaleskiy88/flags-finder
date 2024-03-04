@@ -34,7 +34,7 @@ export const HomePage = ({ countries, setCountries }) => {
       };
       fetchData();
     }
-  }, [countries, setCountries, setFilterredCountries]);
+  }, [countries, setCountries]);
 
   return (
     <>
