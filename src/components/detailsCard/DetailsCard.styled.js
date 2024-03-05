@@ -61,10 +61,6 @@ export const DescriptionItem = styled.li`
   & > b {
     font-weight: var(--fw-normal);
   }
-
-  @media screen and (min-width: 1024px) {
-    //font-size: var(--fs-md);
-  }
 `;
 
 export const BordersTitle = styled.h3`
@@ -72,19 +68,38 @@ export const BordersTitle = styled.h3`
   color: var(--colors-text);
   line-height: 1.5;
   font-weight: var(--fw-normal);
+
+  margin: 0;
+  margin-right: 15px;
 `;
 
-export const Meta = styled.div``;
+export const Meta = styled.div`
+  padding-top: 32px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+
+  & > p {
+    color: var(--colors-text);
+    margin: 0;
+    padding-top: 16px;
+  }
+
+  @media screen and (min-width: 1024px) {
+    padding-top: 68px;
+  }
+`;
 export const BordersList = styled.ul`
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
+  padding-top: 16px;
 `;
 export const BordersItem = styled.li`
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 6px 0;
+  padding: 6px 6px;
   width: 98px;
 
   line-height: normal;
