@@ -16,3 +16,5 @@ export * from "components/countryCard/CountryCard.styled";
 export * from "components/BackBtn/BackBtn.styled";
 export * from "components/detailsCard/DetailsCard";
 export * from "components/detailsCard/DetailsCard.styled";
+export * from "components/pagination/Pagination";
+export * from "components/pagination/Pagination.styled";
