@@ -1,11 +1,19 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { Search, CountriesSection, CountryCard } from "components/index";
+import {
+  Search,
+  CountriesSection,
+  CountryCard,
+  Pagination,
+} from "components/index";
+import { chunkArray } from "utils/index";
 import { fetchAllCountries } from "api/index";
 
-export const HomePage = ({ countries, setCountries }) => {
+export const HomePage = () => {
+  const [countries, setCountries] = useState([]);
   const [filterredCountries, setFilterredCountries] = useState(countries);
+  const [pageIndex, setPageIndex] = useState(0);
 
   const handleSearch = (search, region) => {
     let data = [...countries];
@@ -21,8 +29,9 @@ export const HomePage = ({ countries, setCountries }) => {
         c.name.common.toLowerCase().includes(search.toLowerCase())
       );
     }
-
-    setFilterredCountries(data);
+    const chunkedData = chunkArray(data, 20);
+    setFilterredCountries(chunkedData);
+    setPageIndex(0);
   };
 
   useEffect(() => {
@@ -32,6 +41,7 @@ export const HomePage = ({ countries, setCountries }) => {
         setCountries(allCountriesData);
       };
       fetchData();
+      setPageIndex(0);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
@@ -44,8 +54,14 @@ export const HomePage = ({ countries, setCountries }) => {
   return (
     <>
       <Search onSearch={handleSearch} />
+      <Pagination
+        index={pageIndex}
+        setIndex={setPageIndex}
+        length={filterredCountries.length}
+      />
+
       <CountriesSection>
-        {filterredCountries.map((country) => {
+        {filterredCountries[pageIndex]?.map((country) => {
           const countryInfo = {
             img: country.flags.png,
             countryName: country.name.official,
