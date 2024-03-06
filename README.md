@@ -1,6 +1,6 @@
 # Frontend Mentor - REST Countries API with color theme switcher
 
-[https://zaleskiy88.github.io/](https://zaleskiy88.github.io/flags-finder/)
+(https://zaleskiy88.github.io/flags-finder/)
 
 ## Welcome! 👋
 
@@ -24,9 +24,9 @@ Users should be able to:
 - See all countries from the API on the homepage ✔️
 - Search for a country using an `input` field ✔️
 - Filter countries by region ✔️
-- Click on a country to see more detailed information on a separate page 🚧
-- Click through to the border countries on the detail page 🚧
-
+- Click on a country to see more detailed information on a separate page ✔️
+- Click through to the border countries on the detail page ✔️
+- Pagination 🚧
 <!--
 Want some support on the challenge? [Join our community](https://www.frontendmentor.io/community) and ask questions in the **#help** channel.
 -->
