@@ -12,7 +12,6 @@ import {
   BordersList,
   BordersItem,
 } from "components/index";
-
 import { fetchCountryByCodes } from "api/fetchCountriesByCodes";
 
 export const DetailsCard = ({ countryData }) => {
@@ -50,73 +49,75 @@ export const DetailsCard = ({ countryData }) => {
   }, [borders]);
 
   return (
-    <DetailsArticle>
-      <DetailsImg src={flags.svg} alt={flags.alt} />
-      <div style={{ padding: "30px 0" }}>
-        <DetailsTitle>{name.official}</DetailsTitle>
+    <>
+      <DetailsArticle>
+        <DetailsImg src={flags.svg} alt={flags.alt} />
+        <div style={{ padding: "30px 0" }}>
+          <DetailsTitle>{name.official}</DetailsTitle>
 
-        <ListGroup>
-          <ul>
-            <DescriptionItem>
-              <b>Native Name: </b>
-              {nativeName.common}
-            </DescriptionItem>
-            <DescriptionItem>
-              <b>Population: </b>
-              {population.toLocaleString()}
-            </DescriptionItem>
-            <DescriptionItem>
-              <b>Region: </b>
-              {region}
-            </DescriptionItem>
-            <DescriptionItem>
-              <b>Sub Region: </b>
-              {subregion}
-            </DescriptionItem>
-            <DescriptionItem>
-              <b>Capital: </b>
-              {capital}
-            </DescriptionItem>
-          </ul>
+          <ListGroup>
+            <ul>
+              <DescriptionItem>
+                <b>Native Name: </b>
+                {nativeName?.common}
+              </DescriptionItem>
+              <DescriptionItem>
+                <b>Population: </b>
+                {population.toLocaleString()}
+              </DescriptionItem>
+              <DescriptionItem>
+                <b>Region: </b>
+                {region}
+              </DescriptionItem>
+              <DescriptionItem>
+                <b>Sub Region: </b>
+                {subregion}
+              </DescriptionItem>
+              <DescriptionItem>
+                <b>Capital: </b>
+                {capital}
+              </DescriptionItem>
+            </ul>
 
-          <ul>
-            <DescriptionItem>
-              <b>Top Level Domain: </b>
-              {tld}
-            </DescriptionItem>
-            <DescriptionItem>
-              <b>Currencies: </b>
-              {Object.keys(currencies).map((currencyCode) => (
-                <span key={currencyCode}>
-                  {currencies[currencyCode].name} ({currencyCode})
-                </span>
-              ))}
-            </DescriptionItem>
-            <DescriptionItem>
-              <b>Languages: </b>
-              {Object.values(languages).join(", ")}
-            </DescriptionItem>
-          </ul>
-        </ListGroup>
+            <ul>
+              <DescriptionItem>
+                <b>Top Level Domain: </b>
+                {tld}
+              </DescriptionItem>
+              <DescriptionItem>
+                <b>Currencies: </b>
+                {Object.keys(currencies).map((currencyCode) => (
+                  <span key={currencyCode}>
+                    {currencies[currencyCode].name} ({currencyCode})
+                  </span>
+                ))}
+              </DescriptionItem>
+              <DescriptionItem>
+                <b>Languages: </b>
+                {Object.values(languages).join(", ")}
+              </DescriptionItem>
+            </ul>
+          </ListGroup>
 
-        <Meta>
-          <BordersTitle>Border Countries: </BordersTitle>
-          {borders.length > 0 ? (
-            <BordersList>
-              {borderCountries.map((country) => (
-                <BordersItem
-                  key={country.name.official}
-                  onClick={() => navigateTo(country)}
-                >
-                  {country.name.common}
-                </BordersItem>
-              ))}
-            </BordersList>
-          ) : (
-            <p>This country has no border countries</p>
-          )}
-        </Meta>
-      </div>
-    </DetailsArticle>
+          <Meta>
+            <BordersTitle>Border Countries: </BordersTitle>
+            {borders.length > 0 ? (
+              <BordersList>
+                {borderCountries.map((country) => (
+                  <BordersItem
+                    key={country.name.official}
+                    onClick={() => navigateTo(country)}
+                  >
+                    {country.name.common}
+                  </BordersItem>
+                ))}
+              </BordersList>
+            ) : (
+              <p>This country has no border countries</p>
+            )}
+          </Meta>
+        </div>
+      </DetailsArticle>
+    </>
   );
 };
