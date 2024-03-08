@@ -1,13 +1,10 @@
 import styled from "styled-components";
+import { screenWidth } from "utils/index";
 
 export const PaginationWrapper = styled.div`
-  /* display: flex;
-  padding-top: 30px;
-  padding-bottom: 30px; */
-
   display: flex;
   justify-content: space-between;
-  margin-top: 20px;
+  margin-top: ${screenWidth < 767 ? "25px  " : "50px"};
 `;
 
 export const PaginationList = styled.ul`
@@ -15,13 +12,24 @@ export const PaginationList = styled.ul`
   gap: 8px;
 `;
 
+export const PaginateBtn = styled.button`
+  border: none;
+
+  box-shadow: var(--shadow);
+  border-radius: var(--radii);
+
+  background-color: var(--colors-ui-base);
+  color: var(--colors-text);
+
+  cursor: pointer;
+
+  &:active {
+    background-color: #007bff;
+    color: #fff;
+  }
+`;
+
 export const PaginationBtn = styled.button`
-  /* margin: 0 5px;
-  padding: 5px 10px;
-  border: 1px solid #ccc;
-  background-color: #f2f2f2;
-  color: #333;
-  cursor: pointer; */
   padding: 6px 8px;
   font-size: var(--fs-sm);
 
@@ -31,6 +39,9 @@ export const PaginationBtn = styled.button`
 
   background-color: var(--colors-ui-base);
   color: var(--colors-text);
+
+  cursor: pointer;
+
   &:active {
     background-color: #007bff;
     color: #fff;

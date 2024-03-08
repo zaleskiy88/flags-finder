@@ -4,8 +4,9 @@ import {
   PaginationList,
   PaginationBtn,
   ActiveButton,
+  PaginateBtn,
 } from "components/index";
-
+import { screenWidth } from "utils/index";
 /**
  * Pagination component for navigating through a list of items
  * @param {number} index - the current index of the selected item
@@ -14,7 +15,6 @@ import {
  */
 export const Pagination = ({ index, setIndex, length }) => {
   const [currentBtn, setCurrentBtn] = useState(index + 1);
-  const screenWidth = window.innerWidth;
   const maxButtons = screenWidth < 768 ? 6 : length; // Set the maximum number of buttons to display
   const halfMaxButtons =
     // Calculates the value of halfMaxButtons based on the condition of the screenWidth.
@@ -58,7 +58,7 @@ export const Pagination = ({ index, setIndex, length }) => {
 
   return (
     <PaginationWrapper>
-      <button onClick={goBack}>prev</button>
+      <PaginateBtn onClick={goBack}>Prev</PaginateBtn>
       <PaginationList>
         {Array.from({ length: end - start }, (_, i) =>
           start + i === index ? (
@@ -72,7 +72,7 @@ export const Pagination = ({ index, setIndex, length }) => {
           )
         )}
       </PaginationList>
-      <button onClick={goForward}>next</button>
+      <PaginateBtn onClick={goForward}>Next</PaginateBtn>
     </PaginationWrapper>
   );
 };
