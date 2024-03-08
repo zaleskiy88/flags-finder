@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import Select from "react-select";
+import { screenWidth } from "utils/index";
 
 export const ContinentSelector = styled(Select).attrs({
   styles: {
@@ -11,7 +12,7 @@ export const ContinentSelector = styled(Select).attrs({
       padding: "0",
       border: "none",
       boxShadow: "var(--shadow)",
-      height: "56px",
+      height: screenWidth < 767 ? "48px" : "56px",
     }),
     menu: (provided) => ({
       ...provided,
