@@ -1,11 +1,11 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 import {
   Search,
   CountriesSection,
   CountryCard,
   Pagination,
+  CardLink,
 } from "components/index";
 import { ThreeDots } from "react-loader-spinner";
 import { chunkArray } from "utils/index";
@@ -108,12 +108,12 @@ export const HomePage = () => {
                     ],
                   };
                   return (
-                    <Link
+                    <CardLink
                       to={`country/${country.name.common}`}
                       key={country.name.official}
                     >
                       <CountryCard {...countryInfo} />
-                    </Link>
+                    </CardLink>
                   );
                 })}
               </CountriesSection>

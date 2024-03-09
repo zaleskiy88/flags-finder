@@ -3,7 +3,6 @@ export * from "components/header/Header";
 export * from "components/header/Header.styled";
 export * from "components/main/Main";
 export * from "components/main/Main.styled";
-export * from "components/search/ContinentSelector";
 export * from "components/search/ContinentSelector.styled";
 export * from "components/search/Search";
 export * from "components/search/Search.styled";

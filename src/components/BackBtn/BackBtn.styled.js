@@ -19,6 +19,12 @@ export const BackBtn = styled.button`
 
   cursor: pointer;
 
+  transition: all 0.15s linear;
+
+  &:hover,
+  &:focus {
+    background-color: var(--colors-btn-hover);
+  }
   @media screen and (min-width: 767px) {
     margin-bottom: 80px;
     padding: 10px 36px;

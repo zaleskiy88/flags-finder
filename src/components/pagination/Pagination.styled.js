@@ -23,9 +23,16 @@ export const PaginateBtn = styled.button`
 
   cursor: pointer;
 
+  transition: all 0.15s linear;
+
   &:active {
     background-color: #007bff;
     color: #fff;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: var(--colors-btn-hover);
   }
 `;
 
@@ -42,9 +49,15 @@ export const PaginationBtn = styled.button`
 
   cursor: pointer;
 
+  transition: all 0.15s linear;
+
   &:active {
     background-color: #007bff;
     color: #fff;
+  }
+  &:hover,
+  &:focus {
+    background-color: var(--colors-btn-hover);
   }
 `;
 

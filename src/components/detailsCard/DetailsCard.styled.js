@@ -113,4 +113,10 @@ export const BordersItem = styled.li`
   color: var(--colors-text);
 
   cursor: pointer;
+
+  transition: all 0.15s linear;
+  &:hover,
+  &:focus {
+    background-color: var(--colors-btn-hover);
+  }
 `;

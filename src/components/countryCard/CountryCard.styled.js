@@ -1,12 +1,25 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 export const Card = styled.article`
   border-radius: var(--radii);
   background-color: var(--colors-ui-base);
-  box-shadow: var(--shadow);
   cursor: pointer;
   overflow: hidden;
   height: 336px;
+`;
+
+export const CardLink = styled(Link)`
+  box-shadow: var(--shadow);
+  border-radius: var(--radii);
+
+  transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    transform: scale(1.007);
+    box-shadow: var(--shadow-hover);
+  }
 `;
 
 export const CardImg = styled.img`

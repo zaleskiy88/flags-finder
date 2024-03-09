@@ -32,6 +32,7 @@ export const DetailsCard = ({ countryData }) => {
   } = countryData;
   //getting native name
   const nativeName = getNativeName(name);
+
   const navigateTo = (country) => {
     navigate(`/country/${country.name.common}`);
   };
