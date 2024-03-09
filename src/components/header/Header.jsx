@@ -4,16 +4,17 @@ import {
   PageHeader,
   PageTitle,
   Wrapper,
+  ThemeSwitcherWrapper,
   ThemeSwitcher,
 } from "components/index";
 
-import { IoMoonOutline, IoMoonSharp } from "react-icons/io5";
-
 export const Header = () => {
   const [theme, setTheme] = useState("light");
+  const [toggled, setToggled] = useState(false);
 
   const themeToggle = () => {
     setTheme(theme === "light" ? "dark" : "light");
+    setToggled(!toggled);
   };
 
   useEffect(() => {
@@ -25,10 +26,9 @@ export const Header = () => {
       <Container>
         <Wrapper>
           <PageTitle>Where in the world?</PageTitle>
-          <ThemeSwitcher onClick={themeToggle}>
-            {theme === "light" ? <IoMoonOutline /> : <IoMoonSharp />}
-            {theme} Theme
-          </ThemeSwitcher>
+          <ThemeSwitcherWrapper>
+            <ThemeSwitcher toggled={toggled} toggle={themeToggle} />
+          </ThemeSwitcherWrapper>
         </Wrapper>
       </Container>
     </PageHeader>

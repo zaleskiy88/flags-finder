@@ -1,5 +1,7 @@
+import "@theme-toggles/react/css/Around.css";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import { Around } from "@theme-toggles/react";
 
 export const PageHeader = styled.header`
   box-shadow: var(--shadow);
@@ -9,8 +11,14 @@ export const PageHeader = styled.header`
 export const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  @media screen and (min-width: 767px) {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
 `;
 
 export const PageTitle = styled(Link).attrs({ to: "/" })`
@@ -24,16 +32,20 @@ export const PageTitle = styled(Link).attrs({ to: "/" })`
   }
 `;
 
-export const ThemeSwitcher = styled.div`
-  color: var(--colors-text);
-  display: flex;
-  align-items: center;
-  gap: 8px;
+export const ThemeSwitcherWrapper = styled.div`
   font-size: var(--fs-xs);
   cursor: pointer;
   text-transform: capitalize;
 
   @media screen and (min-width: 767px) {
     font-size: var(--fs-md);
+  }
+`;
+
+export const ThemeSwitcher = styled(Around)`
+  color: var(--colors-text);
+  svg {
+    width: 30px;
+    height: 30px;
   }
 `;
