@@ -17,7 +17,7 @@ export const InputContainer = styled.div`
     width: 480px;
   }
 `;
-// (screenWidth<767 ? 48px: 56px)
+
 export const SearchInput = styled.input.attrs({
   type: "search",
   placeholder: "Search for a country...",

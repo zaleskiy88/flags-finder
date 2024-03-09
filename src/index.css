@@ -1,4 +1,3 @@
-@import-normalize;
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap");
 
 * {
@@ -24,7 +23,9 @@ body[data-theme="dark"] {
   --colors-bg: hsl(207, 26%, 17%);
   --colors-ui-base: hsl(209, 23%, 22%);
   --colors-active: #ffff;
-  --shadow: 0 0 7px 0 rgba(0, 0, 0, 0.29);
+  --shadow: 0 0 7px 0 rgba(0, 0, 0, 0.35);
+  --shadow-hover: 3px 4px 10px 0 rgba(0, 0, 0, 0.6);
+  --colors-btn-hover: rgb(92 99 93 / 95%);
 }
 body[data-theme="light"] {
   --colors-text: hsl(200, 15%, 8%);
@@ -32,6 +33,8 @@ body[data-theme="light"] {
   --colors-ui-base: hsl(0, 0%, 100%);
   --colors-active: #007bff;
   --shadow: 0 0 7px 0 rgba(0, 0, 0, 0.29);
+  --shadow-hover: 0 7px 14px 0 rgba(0, 0, 0, 0.29);
+  --colors-btn-hover: rgb(45 46 47 / 37%);
 }
 
 body {

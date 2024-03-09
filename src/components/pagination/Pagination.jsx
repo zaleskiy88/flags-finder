@@ -7,13 +7,14 @@ import {
   PaginateBtn,
 } from "components/index";
 import { screenWidth } from "utils/index";
-/**
- * Pagination component for navigating through a list of items
- * @param {number} index - the current index of the selected item
- * @param {function} setIndex - function to update the index
- * @param {number} length - the total number of items in the list
- */
+
 export const Pagination = ({ index, setIndex, length }) => {
+  /** Pagination component for navigating through a list of items
+   * @param {number} index - the current index of the selected item
+   * @param {function} setIndex - function to update the index
+   * @param {number} length - the total number of items in the list
+   */
+
   const [currentBtn, setCurrentBtn] = useState(index + 1);
   const maxButtons = screenWidth < 768 ? 6 : length; // Set the maximum number of buttons to display
   const halfMaxButtons =

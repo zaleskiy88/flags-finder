@@ -12,5 +12,3 @@ export const SearchBar = ({ searchInput, setSearchInput }) => {
     </InputContainer>
   );
 };
-
-//

@@ -1,11 +1,9 @@
-/**
- * Retrieves the native name from the input names object.
- *
- * @param {Object} names - the names object containing all names
- * @return {Object} - the oficcial native name & common native name
- */
-
 export const getNativeName = (names) => {
+  /** Retrieves the native name from the input names object.
+   * @param {Object} names - the names object containing all names
+   * @return {Object} - the oficcial native name & common native name
+   */
+
   if (
     names.nativeName.hasOwnProperty("eng") &&
     Object.keys(names.nativeName).length === 1
